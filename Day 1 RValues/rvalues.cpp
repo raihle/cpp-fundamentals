@@ -17,13 +17,14 @@ void func2(const int &x)
 }
 
 
-// x is an regular (lvalue) reference to an int, it can only bind to lvalues
+// x is a regular (lvalue) reference to an int, it can only bind to lvalues
 void func3(int &x)
 {
 	cout << "x is an lvalue reference" << endl;
 }
 
 // x is an rvalue reference (or "refref") to an int, it can only bind to rvalues
+// Why can you do this?
 void func3(int &&x)
 {
 	cout << "x is an rvalue reference" << endl;
@@ -52,6 +53,10 @@ int main()
 
 	func3(n); // Invokes the lvalue version
 	func3(3); // Invokes the rvalue version
+	func3(move(n)); // Move casts lvalues into rvalues. This is only OK if n will never be used again.
+	// After this point, n is potentially invalid.
+	// Implement "move semantics" in your classes to take advantage of potential performance gains in
+	// datastructures (like vector) that use move.
 
 	return 0;
 }
