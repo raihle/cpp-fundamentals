@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FA340982-0D26-4DA0-8664-209A6F0E830D}</ProjectGuid>
-    <RootNamespace>Day1and2Aclass</RootNamespace>
+    <ProjectGuid>{2B0E1956-A4B4-423B-85D1-B3268FC76496}</ProjectGuid>
+    <RootNamespace>Day2Move</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>Day 1 and 2 - Temperature</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -119,11 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Temperature.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Temperature.h" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
