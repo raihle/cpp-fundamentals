@@ -1,71 +1,9 @@
 #include <iostream>
 #include <string>
 
+#include "Temperature.h";
+
 using namespace std;
-
-// Would normally be in a header file
-class Temperature
-{
-public:
-	// Constructor
-	Temperature(float celsius);
-	// Getters
-	float getFahrenheit() const;
-	float getCelsius() const;
-	// Convert to string
-	string format() const;
-	// Operator overloading
-	Temperature operator +(const Temperature &other);
-
-	// Friend function for backwards operator overloading
-	// We have no instance here, so there are two arguments to the operator
-	friend Temperature operator +(const float &left, const Temperature &right);
-	friend istream& operator >>(istream &stream, Temperature &temp);
-private:
-	float celsius;
-};
-
-Temperature::Temperature(float celsius): celsius(celsius) {}
-float Temperature::getCelsius() const
-{
-	return celsius;
-}
-
-float Temperature::getFahrenheit() const
-{
-	return celsius * 1.8f + 32;
-}
-
-string Temperature::format() const
-{
-	return to_string(getCelsius()) + "C, " + to_string(getFahrenheit()) + "F";
-}
-
-Temperature Temperature::operator +(const Temperature &other)
-{
-	return Temperature(celsius + other.celsius);
-}
-
-Temperature operator +(const float &left, const Temperature &right)
-{
-	return Temperature(left + right.celsius);
-}
-
-// ostream is the type of cout
-ostream& operator <<(ostream &stream, const Temperature &temp)
-{
-	// Because #format is declared const, we can call it on our const reference
-	stream << temp.format();
-	return stream;
-}
-
-// istream is the type of cin
-istream& operator >>(istream &stream, Temperature &temp)
-{
-	// We are declared as a friend, so we can modify the temp directly
-	stream >> temp.celsius;
-	return stream;
-}
 
 int main()
 {
@@ -81,7 +19,7 @@ int main()
 	// Performed by adding two-by-two in left-to-right order
 	Temperature really_really_freezing_room_temp = really_freezing_temp + freezing_temp + room_temp;
 
-	// Automatically invokes Temperature constructor because the argument matches the constructor argument of the expected type... ~~~magic~~
+	// Automatically invokes Temperature constructor because the argument matches the constructor argument of the expected type... ~~magic~~
 	Temperature magic_temp = boiling_temp + 15.0f;
 
 	// To do it "backwards", we need a "friend" function
@@ -104,4 +42,14 @@ int main()
 	cout << "Enter temp: ";
 	cin >> reading_temp;
 	cout << "You entered " << reading_temp << endl;
+
+	Temperature incrementing_temp(0.0f);
+	cout << incrementing_temp << endl;
+	cout << ++incrementing_temp << endl;
+	cout << incrementing_temp << endl;
+
+	Temperature post_incrementing_temp(0.0f);
+	cout << post_incrementing_temp << endl;
+	cout << post_incrementing_temp++ << endl;
+	cout << post_incrementing_temp << endl;
 }
