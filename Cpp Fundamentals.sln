@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day 1 - 04 Pointers to Obje
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day 1 and 2 - A class", "Day 1 and 2 - A class\Day 1 and 2 - A class.vcxproj", "{FA340982-0D26-4DA0-8664-209A6F0E830D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day 2 - Inheritance", "Day 2 - Inheritance\Day 2 - Inheritance.vcxproj", "{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -191,6 +193,14 @@ Global
 		{FA340982-0D26-4DA0-8664-209A6F0E830D}.Release|x64.Build.0 = Release|x64
 		{FA340982-0D26-4DA0-8664-209A6F0E830D}.Release|x86.ActiveCfg = Release|Win32
 		{FA340982-0D26-4DA0-8664-209A6F0E830D}.Release|x86.Build.0 = Release|Win32
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Debug|x64.ActiveCfg = Debug|x64
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Debug|x64.Build.0 = Debug|x64
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Debug|x86.Build.0 = Debug|Win32
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Release|x64.ActiveCfg = Release|x64
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Release|x64.Build.0 = Release|x64
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Release|x86.ActiveCfg = Release|Win32
+		{E9F8F14E-CAB7-4181-9C9A-D041E9673CFC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
